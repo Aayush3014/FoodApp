@@ -8,6 +8,8 @@ from django.template import loader
 def index(request):
     item_list = Item.objects.all()
     template = loader.get_template('Food/index.html')
-    context = {}
+    context = {
+        'item_list':item_list
+    }
 
     return HttpResponse(template.render(context,request))
