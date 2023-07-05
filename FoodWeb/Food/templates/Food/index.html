@@ -1,8 +1,18 @@
-{% for item in item_list %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for item in item_list %}
     
     <ul>
         <li>
             <a href="{% url 'Food:detail' item.id %}">{{ item.id }} -- {{ item.item_name }}</a>
         </li>
     </ul>
-{% endfor %}
+    {% endfor %}
+</body>
+</html>
