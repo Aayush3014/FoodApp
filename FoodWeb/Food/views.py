@@ -12,3 +12,6 @@ def index(request):
     }
 
     return render(request,'Food/index.html',context)
+
+def detail(request, item_name):
+    return HttpResponse(f"This item is  : {item_name}")
