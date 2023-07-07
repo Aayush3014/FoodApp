@@ -13,3 +13,6 @@ python3 manage.py sqlmigrate "appname" "filename:eg- 0001"
 
 to do crud operations:
 python3 manage.py shell
+
+to create superuser 
+python3 manage.py createsuperuser.
