@@ -25,13 +25,19 @@
 
     <div class="row">
         <div class="col-md-3 offset-md-2">
-            <img class="card" height="200px" src="{{item.item_image}}" alt="">
+            <img class="card" height="150px" src="{{ item.item_image }}" alt="">
         </div>
 
         <div class="col-md-4">
-
+            <h3>{{ item.item_name }}</h3>
+            <h5>{{ item.item_desc }}</h5>
+            <h6>{{ item.item_price }}</h6>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1">
+            <a href="{% url 'Food:detail' item.id %}" class="btn btn-success">Details</a>
+        </div>
+            
+            <!-- <button class="btn btn-primary btn-sm">Short Button</button> -->
 
     </div>
     
