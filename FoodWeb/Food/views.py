@@ -40,3 +40,12 @@ def item_update(request, id):
         form.save()
         return redirect('Food:index')
     return render(request,'Food/item-form.html',{'form':form, 'item':item})
+
+
+def item_delete(request, id):
+    item = Item.objects.get(id=id)
+
+    if request.method =='POST':
+        item.delete()
+        return redirect('Food:index')
+    return render(request, 'Food/item-delete.html', {'item':item})
