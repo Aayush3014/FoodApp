@@ -126,3 +126,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Default login redirect page if no template is given to the user.
 LOGIN_REDIRECT_URL = 'Food:index'
+
+LOGIN_URL = 'login'

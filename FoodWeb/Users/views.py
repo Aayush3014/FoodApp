@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
-# from django.contrib.auth.forms import UserCreationForm
+
+from django.contrib.auth.decorators import login_required
+
 from django.contrib import messages
+
 from .forms import RegisterForm  # We will use RegisterForm which we have created for adding an email field
                                 #instead of using UserCreationForm which is default provided by Django. 
 
 
-# Create your views here.
 
 def register(request):
     if request.method == "POST":  # Corrected condition
@@ -28,3 +30,8 @@ def register(request):
     raise ValueError( ValueError: The view Users.views.register didn't return an HttpResponse object. 
     It returned None instead.
     """
+
+
+@login_required
+def profilepage(request):
+    return render(request,'Users/profile.html')
