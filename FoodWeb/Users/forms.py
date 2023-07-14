@@ -4,6 +4,8 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 # We have created this register Form by inheriting UserCreationForm.
+# For Extending a new Field and to implement our own Form.
+
 class RegisterForm(UserCreationForm):
     email = forms.EmailField()
 
