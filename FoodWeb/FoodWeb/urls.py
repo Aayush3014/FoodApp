@@ -19,6 +19,12 @@ from django.urls import path, include
 from Users import views as user_views
 from django.contrib.auth import views as authentication_view
 
+
+# Used for showing static files on profile page.
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Food.urls')),
@@ -28,3 +34,7 @@ urlpatterns = [
     path('profile/', user_views.profilepage, name='profile'),
 
 ]
+
+urlpatterns += [
+    # ... the rest of your URLconf goes here ...
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
