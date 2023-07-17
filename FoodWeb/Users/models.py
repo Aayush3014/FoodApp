@@ -7,7 +7,7 @@ class Profile(models.Model):
 
     # This line of code is used to delete the profile page of a user when the account of that user is deleted.
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    image = models.ImageField(default='profilepic.jpeg',upload_to='pictures')
+    image = models.ImageField(default='profilepic.jpg',upload_to='pictures')
     location = models.CharField(max_length=200)
 
     def __str__(self):
