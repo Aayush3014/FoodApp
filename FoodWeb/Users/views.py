@@ -13,7 +13,6 @@ def register(request):
     if request.method == "POST":  # Corrected condition
         form = RegisterForm(request.POST)
         if form.is_valid():
-
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(
