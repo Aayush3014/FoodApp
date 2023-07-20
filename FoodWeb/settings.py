@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%ts4j)q@*($g6q=-7^hqmk$o(=bz!3dzl4(a-8kg&509x*0xb)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -84,18 +84,6 @@ DATABASES = {
 }
 
 
-# DATABASES = {
-#     'default': {
-    
-#         "ENGINE" : 'django.db.backends.postgresql',
-#         'NAME':'railway',
-#         'USER':'postgres',
-#         'PASSWORD': 'uChVQyiBOeZOTSlLql1f',
-#         'HOST': 'containers-us-west-196.railway.app',
-#         'PORT': '6625'
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -146,7 +134,3 @@ LOGIN_URL = 'login'
 MEDIA_ROOT = os.path.join(BASE_DIR,'pictures')
 
 MEDIA_URL = '/pictures/'
-
-
-STATICFILES_DIRS = os.path.join(BASE_DIR,'static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
