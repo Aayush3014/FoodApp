@@ -1,4 +1,4 @@
-python3 django -m createproject "projectname"
+python3 django -m startproject "projectname"
 
 python3 manage.py startapp "appname"
 
